@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>My Image Target AR</title>
-  <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/ar.js/aframe/build/aframe-ar.js"></script>
-</head>
-<body>
-  <a-scene embedded arjs="debugUIEnabled: false;">
-    <a-nft
-      type="nft"
-      url="./assets/globusimage.png"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-    >
-      <a-entity
-        gltf-model="./assets/globus.glb"
-        scale="0.1 0.1 0.1"
-        position="0 0 0"
-        animation-mixer
-      >
-      </a-entity>
-    </a-nft>
-  </a-scene>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>My Image Target AR with Model Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs="sourceType: webcam;">
+      <a-marker type="pattern" url="./assets/globusimage.png">
+        <model-viewer
+          src="./assets/globus.glb"
+          ios-src="./assets/globus.usdz"
+          poster="./assets/globusimage.png"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          auto-rotate
+          shadow-intensity="1"
+          shadow-softness="0.6"
+          alt="My 3D Model"
+          scale="0.1 0.1 0.1"
+        ></model-viewer>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>
