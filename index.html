@@ -1,0 +1,52 @@
+<html lang="en" class="js-focus-visible" data-js-focus-visible=""><head>
+  <title>&lt;model-viewer&gt; Augmented Reality</title>
+  <meta charset="utf-8">
+  <meta name="description" content="<model-viewer> AR examples">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="mystyle.css">
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+</head>
+<body>
+
+<div class="examples-page">
+      <div id="webXR" class="demo">
+<model-viewer src="./assets/globus.glb" poster="../assets/globus.glb" shadow-intensity="1" ar="" camera-controls="" touch-action="pan-y" alt="A 3D model carousel" data-js-focus-visible="" ar-status="not-presenting">
+  
+  <button slot="ar-button" id="ar-button">
+    View in your space
+  </button>
+
+  <div id="ar-prompt">
+    <img src="https://modelviewer.dev/assets/hand.png">
+  </div>
+
+  <button id="ar-failure">
+    AR is not tracking!
+  </button>
+
+  <div class="slider">
+    <div class="slides">
+      <button class="slide selected" style="background-image: url('./assets/globusimage.png');">   
+    </button></div>
+  </div>
+</model-viewer>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+  
+  
+
+  <!-- Documentation-specific dependencies: -->
+  
+
+  <!-- Loads <model-viewer> on modern browsers: -->
+  
+
+
+
+<div id="fs_div_all" style="all:initial;" data-dashlane-observed="true"></div></body></html>
