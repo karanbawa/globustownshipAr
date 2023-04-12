@@ -11,7 +11,7 @@
 
   <model-viewer 
   style="display: flex; width: 100%; height: 100%;" 
-  src="./assets/globus.glb" 
+  src="./assets/color_factory.glb" 
   poster="./assets/globusimage.png" 
   ios-src="./assets/globus.usdz" 
   orientation="0 0deg 0" 
@@ -50,7 +50,7 @@
       
         <div class="slider">
           <div class="slides">
-            <button class="slide selected" onclick="switchSrc(this, 'globus')" style="background-image: url('./assets/globus.png');">
+            <button class="slide selected" onclick="switchSrc(this, 'color_factory')" style="background-image: url('./assets/globus.png');">
       
             </button>  
           </button></div>
@@ -63,7 +63,7 @@
         window.switchSrc = (element, name) => {
           const base = name;
           modelViewer.src = base + '.glb';
-          modelViewer.poster = base + '.png';
+          modelViewer.poster = 'globus' + '.png';
           const slides = document.querySelectorAll(".slide");
           slides.forEach((element) => {element.classList.remove("selected");});
           element.classList.add("selected");
